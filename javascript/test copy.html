@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <title>Đồng Hồ</title>
+</head>
+<body>
+
+  
+        <div class="clock">
+            <div class="center"></div>
+    
+            <div class="gio"  id="gio"> 
+                
+            </div>
+    
+            <div class="phut" id="phut" >    
+              
+            </div>
+    
+            <div class="giay" id="giay" ></div>
+        </div>
+        
+ 
+
+    <div class="image">
+        <img id="img" onclick="changeImage()" src="" alt="">
+    </div>
+
+
+
+    <script>
+        // Img
+        var index = 1;
+      function changeImage() {
+          var imgs = ["troisang.jpg","anhtoi.jpg"];
+          document.getElementById('img').src = imgs[index];
+          index++;
+          if(index ==2) {
+              index = 0;
+          }
+      }
+  </script>
+
+
+
+
+    <script type="text/javascript">
+        let time = new Date();
+        let currentGiay = time.getSeconds()
+        let currentPhut = time.getMinutes()
+        let currentGio = time.getHours()
+
+
+        console.log(currentGio,currentPhut,currentGiay)
+
+
+        let degGiay = currentGiay * 6
+        let degPhut = currentPhut * 6 + currentGiay*0.1
+        let degGio  =  currentGio*30 + currentPhut*0.5
+    
+        const gio = document.querySelector('#gio');
+        const phut = document.querySelector('#phut');
+        const giay = document.querySelector('#giay');
+
+        setInterval(() => {
+            let time = new Date();
+            let currentGiay = time.getSeconds()
+            let currentPhut = time.getMinutes()
+            let currentGio = time.getHours()
+
+
+            console.log(currentGio,currentPhut,currentGiay)
+
+            degGiay+=6
+            degPhut+=0.1
+            degGio += 0.1/24
+            degGiay = degGiay == 360 ? 0 : degGiay
+            degPhut = degPhut == 360 ? 0 : degPhut
+            degGio = degGio == 360 ? 0 : degGio
+            giay.style.transform = `translateY( calc( -50% - var(--giay)/2)) rotatez(${degGiay}deg)`;
+            phut.style.transform = `translateY( calc( -50% - var(--phut)/2)) rotatez(${(degPhut)}deg)`;  
+            gio.style.transform = `translateY( calc( -50% - var(--gio)/2)) rotatez(${(degGio)}deg)`;  
+
+        },1000)
+    </script>
+    
+
+</body>
+</html>

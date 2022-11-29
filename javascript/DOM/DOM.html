@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM
+
+    </title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+
+
+        ul{
+            display: none;
+        }
+
+        /* focus vào thẻ ul cho nó hiện ra  */
+        input:focus ~ ul {
+            display: block;
+        }  
+    </style>
+</head>
+<body>
+    
+    <!-- <h1 id="heading">HTML DOM</h1> -->
+    <!-- <h1 class="heading1">HTML DOM</h1>
+    <h1 class="heading1">HTML DOM</h1>
+    <h1 class="heading1">HTML DOM</h1> -->
+
+
+    <!-- <div class="box">
+        <h2 class="heading-2">HTML DOM 2</h2>
+        <h2 class="heading-2">HTML DOM 2</h2>
+        <h2 class="heading-2">HTML DOM 2</h2>
+        <h2 class="heading-2">HTML DOM 2</h2>
+    </div> -->
+
+
+    <!-- <h1 >Heading</h1>
+    <h1 class="heading">
+        <span>Heading</span>
+        <span>text</span>
+    </h1> -->
+
+
+    <!-- <div class="box" contenteditable=""> 
+        <h1 >Heading new</h1>
+    </div> -->
+
+    <!-- <div class="box box-2"> 
+        <h1 >Heading new</h1>
+    </div> -->
+    
+
+
+
+    <!-- DOM events -->
+        <!-- onclick="console.log(this)" -->
+    <!-- <h1>
+        <span> DOM events 1</span>
+    </h1>
+
+    <h1>
+        <span> DOM events 2</span>
+    </h1>
+
+    <h1>
+        <span> DOM events 3</span>
+    </h1> -->
+
+
+
+
+
+    <!-- <input type="text">
+    <input type="checkbox">
+
+    <select>
+        <option value="1">Javascript</option>
+        <option value="2">PHP</option>
+        <option value="3">Dart</option>
+    </select> -->
+
+
+    <!-- VD1: preventDefault -->
+    <!-- <a href="http://f8.edu.vn">
+        Học lập trình 
+    </a>
+    <br>
+    <a href="http://google.com.vn">
+        Tìm kiếm 
+    </a> -->
+
+    <!-- VD2: preventDefault -->
+    <input type="text" placeholder="Tìm kiếm ">
+
+    <ul>
+        <li>Javascript</li>
+        <li>PHP</li>
+        <li>Golang</li>
+    </ul>
+    
+
+    <!-- VD3:stopPropagation -->
+    <!-- <div > -->
+        <!-- DIV -->
+        <!-- <button id="btn">Click me!</button>
+    </div> -->
+    <div class="products-list"></div>
+    <script src="./dom.js"></script>
+  
+</body>
+</html>

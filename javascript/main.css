@@ -1,0 +1,188 @@
+:root{
+    --gio: 90px;
+    --phut : 110px;
+    --giay : 120px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   
+}
+
+
+.clock{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    margin-bottom: 390px;
+    justify-content: center;
+    align-items: center;
+    background: url(./img.svg/clock-removebg-preview.png);
+    background-color: aquamarine;
+    background-size: cover;
+    border: 10px solid white;
+    border-radius: 50%;
+    z-index: 10000;
+    /* display: none; */
+}
+
+.center{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.gio,
+.phut ,
+.giay {
+    position: absolute;
+}
+
+
+
+
+.gio{
+    width: 8px;
+    height: var(--gio);
+    /* background-color: black; */
+    top: 50%;
+    transform: translateY( calc( -50% - var(--gio)/2));
+    transform-origin: 50% 100%;
+    z-index: 10;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px ;
+}
+
+.gio::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 0px;
+    border-top: 64px solid transparent;
+    border-bottom: 64px solid black;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -71px;
+
+}
+.gio::after{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 60px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+}
+.phut{
+    width: 4px;
+    height: var(--phut);
+    /* background-color: #fff; */
+    top: 50%;
+    transform: translateY( calc( -50% - var(--phut)/2));
+    transform-origin: 50% 100%;
+    z-index: 11;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px ;
+}
+
+
+.phut::before{
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 64px solid transparent;
+    border-bottom: 64px solid black;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -66px;
+
+}
+.phut::after{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 60px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+}
+.giay{
+    width: 2px;
+    height: var(--giay);
+    top: 50%;
+    transform: translateY( calc( -50% - var(--giay)/2));
+    transform-origin: 50% 100%;
+    z-index: 12;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px ;
+}
+.giay::before{
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 64px solid transparent;
+    border-bottom: 64px solid red;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -66px;
+
+}
+.giay::after{
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 60px;
+    background-color: red;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+}
+
+.clock, .image {
+    position: absolute;
+}
+
+
+
+.image{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image #img {
+    width: 1400px;
+    height: 797px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
